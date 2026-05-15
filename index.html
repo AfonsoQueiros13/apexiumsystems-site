@@ -3,225 +3,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Apexium Systems</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:white;
+      overflow-x:hidden;
+
       background:
-        radial-gradient(circle at top, #0c3d8f 0%, #04152f 40%, #010814 100%);
-      color: white;
-      min-height: 100vh;
-      overflow-x: hidden;
+      radial-gradient(circle at top,#0d47a1 0%,#04152f 35%,#010814 100%);
     }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 24px;
+    .container{
+      width:100%;
+      max-width:1300px;
+      margin:auto;
+      padding:40px 24px;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 80px;
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:90px;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #4cc3ff;
+    .logo-text{
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:2px;
+      color:#53c9ff;
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-top: 40px;
+    .hero{
+      text-align:center;
+      padding-top:30px;
     }
 
-    .hero img {
-      width: 220px;
-      margin-bottom: 30px;
-      filter: drop-shadow(0 0 20px rgba(0, 170, 255, 0.4));
+    .hero-logo{
+      width:230px;
+      margin-bottom:35px;
+
+      filter:
+      drop-shadow(0 0 30px rgba(0,170,255,0.4));
     }
 
-    .hero h1 {
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      max-width: 900px;
+    .hero h1{
+      font-size:72px;
+      line-height:1.05;
+      font-weight:800;
+      margin-bottom:28px;
+      max-width:1000px;
+      margin-inline:auto;
     }
 
-    .hero h1 span {
-      color: #42c7ff;
+    .hero h1 span{
+      color:#53c9ff;
     }
 
-    .hero p {
-      max-width: 760px;
-      font-size: 20px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 40px;
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      color:rgba(255,255,255,0.75);
+      font-size:22px;
+      line-height:1.8;
+      margin-bottom:45px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .hero-buttons{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
     }
 
-    .btn {
-      padding: 16px 28px;
-      border-radius: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.25s ease;
+    .btn{
+      text-decoration:none;
+      padding:18px 30px;
+      border-radius:18px;
+      font-weight:600;
+      transition:0.25s ease;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #0ea5ff, #2563eb);
-      color: white;
-      box-shadow: 0 10px 30px rgba(37,99,235,0.35);
+    .btn-primary{
+      background:
+      linear-gradient(135deg,#0ea5ff,#2563eb);
+
+      color:white;
+
+      box-shadow:
+      0 15px 40px rgba(37,99,235,0.35);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
+    .btn-primary:hover{
+      transform:translateY(-3px);
     }
 
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.15);
-      color: white;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(14px);
+      color:white;
     }
 
-    .section {
-      margin-top: 140px;
+    .platform-showcase{
+      margin-top:140px;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 18px;
+    .showcase-text{
+      text-align:center;
+      max-width:900px;
+      margin:auto;
+      margin-bottom:70px;
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 720px;
-      margin: auto;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
-      margin-bottom: 60px;
+    .tag{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+
+      background:
+      rgba(255,255,255,0.06);
+
+      border:
+      1px solid rgba(255,255,255,0.1);
+
+      color:#53c9ff;
+
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
+
+      margin-bottom:22px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+    .showcase-text h2{
+      font-size:54px;
+      line-height:1.15;
+      margin-bottom:22px;
     }
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 32px;
-      backdrop-filter: blur(14px);
-      transition: 0.25s ease;
+    .showcase-text p{
+      color:rgba(255,255,255,0.72);
+      font-size:20px;
+      line-height:1.8;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(66,199,255,0.4);
+    .devices-grid{
+      display:grid;
+      grid-template-columns:
+      repeat(auto-fit,minmax(320px,1fr));
+
+      gap:28px;
     }
 
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 14px;
+    .device-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      height:450px;
+
+      background:
+      rgba(255,255,255,0.05);
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      transition:0.3s ease;
     }
 
-    .card p {
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
+    .device-card:hover{
+      transform:translateY(-8px);
+
+      border-color:
+      rgba(83,201,255,0.4);
+
+      box-shadow:
+      0 20px 60px rgba(0,0,0,0.4);
     }
 
-    .contact {
-      text-align: center;
-      margin-top: 140px;
-      padding-bottom: 80px;
+    .device-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .contact h2 {
-      font-size: 42px;
-      margin-bottom: 18px;
+    .device-overlay{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+
+      padding:34px;
+
+      background:
+      linear-gradient(
+      to top,
+      rgba(0,0,0,0.92),
+      rgba(0,0,0,0.2),
+      transparent);
     }
 
-    .contact p {
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 24px;
-      font-size: 18px;
+    .device-overlay h3{
+      font-size:30px;
+      margin-bottom:10px;
     }
 
-    .email {
-      display: inline-block;
-      padding: 18px 26px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #4cc3ff;
-      font-size: 18px;
-      text-decoration: none;
-      font-weight: 600;
+    .device-overlay p{
+      color:rgba(255,255,255,0.75);
+      font-size:16px;
+      line-height:1.6;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: rgba(255,255,255,0.4);
-      font-size: 14px;
+    .services{
+      margin-top:150px;
     }
 
-    @media(max-width: 768px) {
-      .hero h1 {
-        font-size: 42px;
+    .section-title{
+      text-align:center;
+      font-size:52px;
+      margin-bottom:22px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:800px;
+      margin:auto;
+      color:rgba(255,255,255,0.72);
+      line-height:1.8;
+      font-size:20px;
+      margin-bottom:70px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:28px;
+    }
+
+    .card{
+      padding:34px;
+      border-radius:28px;
+
+      background:
+      rgba(255,255,255,0.05);
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(18px);
+
+      transition:0.3s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+
+      border-color:
+      rgba(83,201,255,0.4);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:18px;
+    }
+
+    .card p{
+      color:rgba(255,255,255,0.72);
+      line-height:1.8;
+    }
+
+    .contact{
+      margin-top:150px;
+      text-align:center;
+      padding-bottom:80px;
+    }
+
+    .contact h2{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      color:rgba(255,255,255,0.72);
+      font-size:20px;
+      margin-bottom:28px;
+    }
+
+    .email{
+      display:inline-block;
+
+      padding:20px 30px;
+
+      border-radius:18px;
+
+      background:
+      rgba(255,255,255,0.05);
+
+      border:
+      1px solid rgba(255,255,255,0.1);
+
+      color:#53c9ff;
+
+      text-decoration:none;
+      font-weight:700;
+      font-size:18px;
+
+      transition:0.25s ease;
+    }
+
+    .email:hover{
+      transform:translateY(-2px);
+    }
+
+    footer{
+      text-align:center;
+      padding:35px;
+      color:rgba(255,255,255,0.4);
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:46px;
       }
 
-      .hero p {
-        font-size: 18px;
+      .hero p{
+        font-size:18px;
       }
 
+      .showcase-text h2,
       .section-title,
-      .contact h2 {
-        font-size: 32px;
+      .contact h2{
+        font-size:36px;
       }
+
+      .showcase-text p,
+      .section-subtitle,
+      .contact p{
+        font-size:18px;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
     <nav>
-      <div class="logo">APEXIUM SYSTEMS</div>
+      <div class="logo-text">
+        APEXIUM SYSTEMS
+      </div>
     </nav>
 
     <section class="hero">
-      <img src="logo.png" alt="Apexium Systems Logo">
+
+      <img
+        class="hero-logo"
+        src="logo.png"
+        alt="Apexium Systems Logo"
+      >
 
       <h1>
         We build <span>modern software</span><br>
@@ -229,57 +393,155 @@
       </h1>
 
       <p>
-        Apexium Systems develops custom software solutions focused on scalability,
-        performance, automation and premium user experience.
-        We help businesses transform ideas into real digital products.
+        Apexium Systems develops premium custom software focused on
+        scalability, performance, automation and world-class user experiences.
+        We transform ideas into real digital products.
       </p>
 
-      <div class="buttons">
-        <a href="mailto:apexiumsystems@gmail.com" class="btn btn-primary">
+      <div class="hero-buttons">
+
+        <a
+          href="mailto:apexiumsystems@gmail.com"
+          class="btn btn-primary"
+        >
           Contact Us
         </a>
 
-        <a href="#services" class="btn btn-secondary">
-          Our Services
+        <a
+          href="#services"
+          class="btn btn-secondary"
+        >
+          Explore Services
         </a>
+
       </div>
+
     </section>
 
-    <section class="section" id="services">
+    <section class="platform-showcase">
+
+      <div class="showcase-text">
+
+        <span class="tag">
+          Cross-platform software
+        </span>
+
+        <h2>
+          Mobile apps, web platforms and desktop software
+        </h2>
+
+        <p>
+          We create modern digital experiences across iPhone,
+          Android, Windows, macOS and scalable web platforms.
+        </p>
+
+      </div>
+
+      <div class="devices-grid">
+
+        <div class="device-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
+            alt="Mobile Applications"
+          >
+
+          <div class="device-overlay">
+            <h3>Mobile Applications</h3>
+
+            <p>
+              iOS & Android applications with modern UI/UX
+              and realtime experiences.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="device-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop"
+            alt="Desktop Applications"
+          >
+
+          <div class="device-overlay">
+            <h3>Desktop Platforms</h3>
+
+            <p>
+              Windows & macOS software solutions designed
+              for performance and productivity.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="device-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+            alt="Web Platforms"
+          >
+
+          <div class="device-overlay">
+            <h3>Web Platforms</h3>
+
+            <p>
+              Scalable web systems, dashboards and
+              cloud-connected digital platforms.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="services" id="services">
 
       <h2 class="section-title">
         Software tailored to your business
       </h2>
 
       <p class="section-subtitle">
-        We design and develop high-quality digital products with a strong focus on engineering,
-        architecture and long-term scalability.
+        We design and develop scalable software solutions with
+        strong engineering principles, clean architecture and
+        long-term sustainability.
       </p>
 
       <div class="cards">
 
         <div class="card">
+
           <h3>Custom Software</h3>
+
           <p>
-            Tailor-made platforms, business systems and internal tools
-            built specifically for your operational needs.
+            Tailor-made business platforms, management systems
+            and operational tools built specifically for your workflow.
           </p>
+
         </div>
 
         <div class="card">
-          <h3>Mobile Applications</h3>
-          <p>
-            Cross-platform mobile apps for Android and iOS with modern UI,
-            realtime features and scalable architecture.
-          </p>
-        </div>
 
-        <div class="card">
           <h3>AI & Automation</h3>
+
           <p>
-            AI-powered workflows, automation systems and intelligent tools
-            designed to improve efficiency and reduce operational overhead.
+            Intelligent workflows, automation systems and AI-powered
+            solutions designed to improve efficiency and reduce overhead.
           </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Realtime Platforms</h3>
+
+          <p>
+            Realtime dashboards, telemetry systems and cloud-native
+            architectures focused on performance and observability.
+          </p>
+
         </div>
 
       </div>
@@ -288,13 +550,18 @@
 
     <section class="contact">
 
-      <h2>Let’s build something great</h2>
+      <h2>
+        Let’s build something great
+      </h2>
 
       <p>
         Looking for custom software or a technology partner?
       </p>
 
-      <a class="email" href="mailto:apexiumsystems@gmail.com">
+      <a
+        class="email"
+        href="mailto:apexiumsystems@gmail.com"
+      >
         apexiumsystems@gmail.com
       </a>
 
