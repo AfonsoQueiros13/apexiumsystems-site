@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apexium Systems</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top, #0c3d8f 0%, #04152f 40%, #010814 100%);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 24px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #4cc3ff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .hero img {
+      width: 220px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 20px rgba(0, 170, 255, 0.4));
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 900px;
+    }
+
+    .hero h1 span {
+      color: #42c7ff;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5ff, #2563eb);
+      color: white;
+      box-shadow: 0 10px 30px rgba(37,99,235,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .section {
+      margin-top: 140px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 720px;
+      margin: auto;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(14px);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(66,199,255,0.4);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 140px;
+      padding-bottom: 80px;
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+
+    .email {
+      display: inline-block;
+      padding: 18px 26px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #4cc3ff;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section-title,
+      .contact h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <nav>
+      <div class="logo">APEXIUM SYSTEMS</div>
+    </nav>
+
+    <section class="hero">
+      <img src="logo.png" alt="Apexium Systems Logo">
+
+      <h1>
+        We build <span>modern software</span><br>
+        for ambitious businesses
+      </h1>
+
+      <p>
+        Apexium Systems develops custom software solutions focused on scalability,
+        performance, automation and premium user experience.
+        We help businesses transform ideas into real digital products.
+      </p>
+
+      <div class="buttons">
+        <a href="mailto:apexiumsystems@gmail.com" class="btn btn-primary">
+          Contact Us
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          Our Services
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+
+      <h2 class="section-title">
+        Software tailored to your business
+      </h2>
+
+      <p class="section-subtitle">
+        We design and develop high-quality digital products with a strong focus on engineering,
+        architecture and long-term scalability.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Custom Software</h3>
+          <p>
+            Tailor-made platforms, business systems and internal tools
+            built specifically for your operational needs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Mobile Applications</h3>
+          <p>
+            Cross-platform mobile apps for Android and iOS with modern UI,
+            realtime features and scalable architecture.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>AI & Automation</h3>
+          <p>
+            AI-powered workflows, automation systems and intelligent tools
+            designed to improve efficiency and reduce operational overhead.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="contact">
+
+      <h2>Let’s build something great</h2>
+
+      <p>
+        Looking for custom software or a technology partner?
+      </p>
+
+      <a class="email" href="mailto:apexiumsystems@gmail.com">
+        apexiumsystems@gmail.com
+      </a>
+
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Apexium Systems. All rights reserved.
+  </footer>
+
+</body>
+</html>
